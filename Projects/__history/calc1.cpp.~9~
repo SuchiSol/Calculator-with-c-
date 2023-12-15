@@ -1,0 +1,44 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include "calc1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+int fnum;
+int snum;
+int result;
+char operation;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+	
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::NumberClick(TObject *Sender)
+{
+	TButton* button = ((TButton*)Sender);
+
+	if  (Edit1->Text=="0")
+	{
+		Edit1->Text = button->Caption;
+	}
+	else
+	{
+		Edit1->Text = Edit1->Text +button->Caption;
+    }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::OperatorClick(TObject *Sender)
+{
+		TButton* button = ((TButton*)Sender);
+		fnum =   Edit1->Text
+}
+//---------------------------------------------------------------------------
+

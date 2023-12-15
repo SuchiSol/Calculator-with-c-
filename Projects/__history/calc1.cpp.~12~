@@ -1,0 +1,130 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include "calc1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+int num1;
+int num2;
+int result;
+String operation;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+	
+}
+//---------------------------------------------------------------------------
+double Calculate(double num1, double num2, char operation)
+{
+    switch (operation)
+    {
+		case '+': return num1 + num2;
+        case '-': return num1 - num2;
+        case '*': return num1 * num2;
+        case '/':
+            if (num2 != 0)
+                return num1 / num2;
+            else
+                return 0; // handle division by zero
+        default:
+			return 0; // invalid operation
+    }
+}
+
+void __fastcall TForm1::NumberClick(TObject *Sender)
+{
+	TButton* button = ((TButton*)Sender);
+
+	if  (EditDisplay->Text=="0")
+	{
+		EditDisplay->Text = button->Caption;
+	}
+	else
+	{
+		EditDisplay->Text = EditDisplay->Text +button->Caption;
+	}
+	/*TButton *button = dynamic_cast<TButton*>(Sender);
+	if (button)
+	{
+		Edit1->Text = Edit1->Text + button->Caption;
+	}    */
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::OperatorClick(TObject *Sender)
+{
+	 TButton* button = ((TButton*)Sender);
+	 num1 =   (EditDisplay->Text.ToInt());
+	 operation = button->Caption;
+	 EditDisplay->Text = "";
+	   /*TButton *button = dynamic_cast<TButton*>(Sender);
+		if (button)
+		{
+			if (!FLastOperation.IsEmpty())
+			{
+				// Perform previous calculation
+				double result = Calculate(FLastValue, Edit1->Text.ToDouble(), FLastOperation[1]);
+				Edit1->Text = FloatToStr(result);
+			}
+
+			// Store the current value and operation
+			FLastValue = Edit1->Text.ToDouble();
+			FLastOperation = button->Caption;
+			Edit1->Text = FLastValue;  // Display the current value
+		}  */
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::btnEqualsClick(TObject *Sender)
+{
+	num2 =  (EditDisplay->Text.ToInt());
+	if (operation == "+")
+	{
+	  result= num1+ num2;
+	  EditDisplay->Text= result;
+	}
+	else if (operation == "-")
+	{
+	  result= num1 - num2;
+	  EditDisplay->Text= result;
+	}
+	else if (operation == "*")
+	{
+	  result= num1* num2;
+	  EditDisplay->Text= result;
+	}
+	else if (operation == "/")
+	{
+	  result= num1/ num2;
+	  EditDisplay->Text= result;
+	}
+	 /*if (!FLastOperation.IsEmpty())
+		{
+			// Perform the final calculation
+			double result = Calculate(FLastValue, Edit1->Text.ToDouble(), FLastOperation[1]);
+			Edit1->Text = FloatToStr(result);
+
+			// Reset stored values
+			FLastValue = 0;
+			FLastOperation = "";
+		} */
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::btnCClick(TObject *Sender)
+{
+EditDisplay->Text ="";
+	 /*if (!FLastOperation.IsEmpty())
+		{
+			// Perform the final calculation
+        Edit1->Text = "";          // Clear the display
+		FLastValue = 0;                 // Reset stored value
+		FLastOperation = "";
+		}    */
+}
+//---------------------------------------------------------------------------
+

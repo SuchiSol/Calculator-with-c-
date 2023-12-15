@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2023-12-14 13:53:50.011,=C:\Users\DELL\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2023-12-14 13:53:50.101,=C:\Users\DELL\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2023-12-14 13:59:27.076,C:\Users\DELL\OneDrive\Documents\Embarcadero\Studio\Projects\calcPCH1.h=C:\Users\DELL\OneDrive\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2023-12-14 13:59:27.103,C:\Users\DELL\OneDrive\Documents\Embarcadero\Studio\Projects\calc.cbproj=C:\Users\DELL\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2023-12-14 13:59:36.943,C:\Users\DELL\OneDrive\Documents\Embarcadero\Studio\Projects\calc1.dfm=C:\Users\DELL\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023-12-14 13:59:36.943,C:\Users\DELL\OneDrive\Documents\Embarcadero\Studio\Projects\calc1.cpp=C:\Users\DELL\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2023-12-14 13:59:36.943,C:\Users\DELL\OneDrive\Documents\Embarcadero\Studio\Projects\calc1.h=C:\Users\DELL\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+  </Transactions>
+</BorlandProject>
